@@ -36,11 +36,13 @@
 
         console.clear();
 
-        // Play the audio when the page loads
-        window.onload = () => {
+         // Function to play the music when user clicks
+        document.body.addEventListener('click', () => {
             const music = document.getElementById('background-music');
-            music.play();
-        };
+            if (music.paused) {
+                music.play();
+            }
+        });
 
 
         let scene = new THREE.Scene();
