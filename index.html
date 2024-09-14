@@ -27,12 +27,21 @@
 </style>
 
 <body>
-        
+  <!-- Audio file for 'gone.mp3' -->
+    <audio id="background-music" src="gone.mp3" preload="auto"></audio>
+
     <script type="module">
         import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
         import { OrbitControls } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls";
 
         console.clear();
+
+        // Play the audio when the page loads
+        window.onload = () => {
+            const music = document.getElementById('background-music');
+            music.play();
+        };
+
 
         let scene = new THREE.Scene();
         scene.background = new THREE.Color(0x160016);
