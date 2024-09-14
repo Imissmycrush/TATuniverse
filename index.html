@@ -27,14 +27,10 @@
 </style>
 
 <body>
-    <!-- Add the audio element here -->
-    <audio id="background-music" src="gone.mp3" autoplay loop></audio>
+    <audio autoplay loop  id="playAudio">
+      <source src="gone.mp3">
+    </audio>
     
-    <!-- User interaction instruction -->
-    <div id="play-instruction" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); color: white; font-size: 24px; font-family: Megrim, cursive;">
-        Click anywhere to play the music
-    </div>
-
     <script type="module">
         import * as THREE from "https://cdn.skypack.dev/three@0.136.0";
         import { OrbitControls } from "https://cdn.skypack.dev/three@0.136.0/examples/jsm/controls/OrbitControls";
